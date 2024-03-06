@@ -1,0 +1,73 @@
+.backimg{
+    background: url("../imagine/note.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: cover;
+}
+.navbar .nav-item .nav-link{
+    font-size:20px;
+    color:white;
+}
+.navbar .nav-item:hover .nav-link{
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+     /* CSS styles for the form */
+ .add_notes {
+     width: 50%;
+
+     margin: 0 auto;
+ }
+
+.no-note{
+      text-align: center;
+      font-size: 30px;
+  }
+.note-block {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1.5px solid #ccc;
+    padding: 10px;
+    margin: 50px 300px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 2px #888888;
+
+}
+.note-block h3, .note-block textarea {
+    display: block;
+    margin: 10px auto;
+    width: 50%; /* Tăng chiều rộng lên gấp đôi */
+    height: 100%; /* Giảm chiều dài đi một nửa */
+    resize: none; /* Ngăn chặn việc thay đổi kích thước bằng cách kéo */
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+#content{
+    height: 300px;
+}
+
+

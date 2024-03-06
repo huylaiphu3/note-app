@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <style>
+        /* CSS styles for the form */
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Registration</h2>
+                </div>
+                <div class="card-body">
+                    <form
+                            method="post"
+                            th:action="@{/saveUser}"
+                    >
+                        <div class="form-group mb-3">
+                            <label class="form-label">Name</label>
+                            <input
+                                    class="form-control"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter name"
+                                    type="text"
+                            />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="form-label">Email</label>
+                            <input
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter email address"
+                                    type="email"
+                            />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="form-label">Password</label>
+                            <input
+                                    class="form-control"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter password"
+                                    type="password"
+                            />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="about">About</label>
+                            <textarea
+                                    class="form-control"
+                                    id="about"
+                                    name="about"
+                                    placeholder="Enter About"
+                                    type="text">
+                            </textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Register</button>
+                            <span>Already registered? <a th:href="@{/login}">Login here</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
